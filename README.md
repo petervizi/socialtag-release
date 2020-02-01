@@ -1,6 +1,12 @@
 # socialtag-release
 Debian repository of the SocialTag application
 
+## get setup.sh
+
+```sh
+curl -sL -osetup.sh https://bit.ly/2S8GZN0
+```
+
 ## aptly howto
 
 ```sh
