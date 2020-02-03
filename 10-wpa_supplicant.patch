@@ -1,0 +1,11 @@
+--- 10-wpa_supplicant	2019-12-09 05:26:29.943407687 -1000
++++ /lib/dhcpcd/dhcpcd-hooks/10-wpa_supplicant	2019-11-30 06:21:11.360382338 -1000
+@@ -59,7 +59,7 @@
+ 	syslog info "starting wpa_supplicant"
+ 	wpa_supplicant_driver="${wpa_supplicant_driver:-nl80211,wext}"
+ 	driver=${wpa_supplicant_driver:+-D}$wpa_supplicant_driver
+-	err=$(wpa_supplicant -B -c"$wpa_supplicant_conf" -i"$interface" \
++	err=$(wpa_supplicant -u -B -c"$wpa_supplicant_conf" -i"$interface" \
+ 	    "$driver" 2>&1)
+ 	errn=$?
+ 	if [ $errn != 0 ]; then
