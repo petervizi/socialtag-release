@@ -27,4 +27,4 @@ KHdwYV9zdXBwbGljYW50IC11IC1CIC1jIiR3cGFfc3VwcGxpY2FudF9jb25mIiAtaSIkaW50ZXJm
 YWNlIiBcCiAJICAgICIkZHJpdmVyIiAyPiYxKQogCWVycm49JD8KIAlpZiBbICRlcnJuICE9IDAg
 XTsgdGhlbgo=" | base64 --decode > 10-wpa_supplicant.patch
 
-patch < 10-wpa_supplicant.patch
+patch /lib/dhcpcd/dhcpcd-hooks/10-wpa_supplicant 10-wpa_supplicant.patch
