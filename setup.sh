@@ -4,7 +4,7 @@ set -ex
 
 # from https://keys.openpgp.org/
 KEY_ID=730878BE36688D52
-gpg --keyserver https://keys.openpgp.org:443 --recv ${KEY_ID}
+gpg --recv ${KEY_ID}
 gpg --armor --export ${KEY_ID} | apt-key add
 
 echo "deb https://s3-us-west-1.amazonaws.com/repo.socialtag.tv/beta/ vankman main" > /etc/apt/sources.list.d/socialtag.list
